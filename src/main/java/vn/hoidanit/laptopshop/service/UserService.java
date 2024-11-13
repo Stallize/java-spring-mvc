@@ -34,4 +34,8 @@ public class UserService {
         return stall;
     }
 
+    public List<User> getAllUserById(long id) {
+        return this.userRepository.findById(id);
+    }
+
 }
