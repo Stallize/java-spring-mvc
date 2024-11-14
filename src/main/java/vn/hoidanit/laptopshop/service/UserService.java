@@ -34,8 +34,12 @@ public class UserService {
         return stall;
     }
 
-    public List<User> getAllUserById(long id) {
+    public User getUserById(long id) {
         return this.userRepository.findById(id);
+    }
+
+    public void deleteUserById(long id) {
+        this.userRepository.deleteById(id);
     }
 
 }

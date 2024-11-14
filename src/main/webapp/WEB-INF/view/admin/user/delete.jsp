@@ -6,7 +6,7 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>User ${id} Detail</title>
+                <title>User ${id} Delete</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
                 <!-- Latest compiled JavaScript -->
@@ -22,24 +22,19 @@
                     <div class="row">
                         <div class="col-12 mx-auto">
                             <div class="d-flex justify-content-between">
-                                <h3>User ${id} Detail </h3>
+                                <h3>Delete User ${id}? </h3>
                             </div>
                             <hr />
-                            <div class="card" style="width: 60%">
-                                <div class="card-header">
-                                    User Information
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">ID:${detail.id}</li>
-                                    <li class="list-group-item">Email:${detail.email}</li>
-                                    <li class="list-group-item">Fullname:${detail.fullName}</li>
-                                    <li class="list-group-item">PhoneNumber:${detail.phone}</li>
-                                    <li class="list-group-item">Address:${detail.address}</li>
-                                </ul>
+                            <div class="alert alert-danger" role="alert">
+                                Bạn có chắn chắn muốn xóa người dùng này không?
                             </div>
-
-                            <a href="/admin/user" class="btn btn-primary">Back</a>
-
+                            <form:form method="post" action="/admin/user/delete" modelAttribute="deleteUser">
+                                <div class="mb-3" style="display: none;">
+                                    <label class="form-label">ID</label>
+                                    <form:input type="text" class="form-control" value="${id}" path="id" />
+                                </div>
+                                <button type="submit" class="btn btn-danger">Confirm</button>
+                            </form:form>
 
                         </div>
                     </div>
