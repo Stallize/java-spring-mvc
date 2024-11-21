@@ -1,4 +1,4 @@
-package vn.hoidanit.laptopshop.controller;
+package vn.hoidanit.laptopshop.controller.admin;
 
 import java.util.List;
 
@@ -40,7 +40,7 @@ public class UserController {
     public String getUserPage(Model model) {
         List<User> users = this.userService.getAllUsers();
         model.addAttribute("user", users); // "user" la gia tri nhan duoc ben view , users la bien o tren gan vao
-        return "admin/user/user";
+        return "admin/user/show";
     }
 
     @RequestMapping("/admin/user/{id}")
@@ -48,7 +48,7 @@ public class UserController {
         User userDetail = this.userService.getUserById(id);
         model.addAttribute("id", id);
         model.addAttribute("detail", userDetail);
-        return "admin/user/show";
+        return "admin/user/detail";
     }
 
     @RequestMapping("/admin/user/create") // GET

@@ -26,24 +26,27 @@
                                 <ol class="breadcrumb mb-4">
                                     <li class="breadcrumb-item active">Dashboard</li>
                                 </ol>
-
                                 <div class="row">
                                     <div class="col-12 mx-auto">
                                         <div class="d-flex justify-content-between">
-                                            <h3>Delete User ${id}? </h3>
+                                            <h3>User ${id} Detail </h3>
                                         </div>
                                         <hr />
-                                        <div class="alert alert-danger" role="alert">
-                                            Bạn có chắn chắn muốn xóa người dùng này không?
-                                        </div>
-                                        <form:form method="post" action="/admin/user/delete"
-                                            modelAttribute="deleteUser">
-                                            <div class="mb-3" style="display: none;">
-                                                <label class="form-label">ID</label>
-                                                <form:input type="text" class="form-control" value="${id}" path="id" />
+                                        <div class="card" style="width: 60%">
+                                            <div class="card-header">
+                                                User Information
                                             </div>
-                                            <button type="submit" class="btn btn-danger">Confirm</button>
-                                        </form:form>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">ID:${detail.id}</li>
+                                                <li class="list-group-item">Email:${detail.email}</li>
+                                                <li class="list-group-item">Fullname:${detail.fullName}</li>
+                                                <li class="list-group-item">PhoneNumber:${detail.phone}</li>
+                                                <li class="list-group-item">Address:${detail.address}</li>
+                                            </ul>
+                                        </div>
+
+                                        <a href="/admin/user" class="btn btn-primary">Back</a>
+
 
                                     </div>
                                 </div>
