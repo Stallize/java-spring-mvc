@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,10 +31,13 @@ public class UserController {
     // DI : Dependency Injection
     private final UserService userService;
     private final UploadService uploadService;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserController(UserService userService, UploadService uploadService) {
+    public UserController(UserService userService, UploadService uploadService,
+            PasswordEncoder passwordEncoder) {
         this.userService = userService;
         this.uploadService = uploadService;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @RequestMapping("/")
@@ -69,8 +74,13 @@ public class UserController {
     public String createUserPage(Model model,
             @ModelAttribute("newUser") User stall,
             @RequestParam("stallFile") MultipartFile file) {
-        String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
+        String avatar = this.uploadService.handleSaveUploadFile(file, "avatar"); // luu ten file
+        String hashPassword = this.passwordEncoder.encode(stall.getPassword());
+        stall.setAvatar(avatar);
+        stall.setPassword(hashPassword);
+        stall.setRole(userService.getRoleByName(stall.getRole().getName()));
 
+        // save
         this.userService.handleSaveUser(stall);
         return "redirect:/admin/user";
     }
@@ -83,12 +93,16 @@ public class UserController {
     }
 
     @PostMapping("/admin/user/update") // GET
-    public String postUpdateUser(Model model, @ModelAttribute("updateUser") User stall) {
+    public String postUpdateUser(Model model, @ModelAttribute("updateUser") User stall,
+            @RequestParam("stallFile") MultipartFile file) {
         User currentUser = this.userService.getUserById(stall.getId());
         if (currentUser != null) {
+            String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
             currentUser.setFullName(stall.getFullName());
             currentUser.setPhone(stall.getPhone());
             currentUser.setAddress(stall.getAddress());
+            currentUser.setRole(userService.getRoleByName(stall.getRole().getName()));
+            currentUser.setAvatar(avatar);
             this.userService.handleSaveUser(currentUser);
         }
         model.addAttribute("updateUser", currentUser);
