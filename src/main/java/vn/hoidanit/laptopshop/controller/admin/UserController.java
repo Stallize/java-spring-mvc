@@ -19,11 +19,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import vn.hoidanit.laptopshop.service.UploadService;
 import vn.hoidanit.laptopshop.service.UserService;
 import vn.hoidanit.laptopshop.domain.User;
-import vn.hoidanit.laptopshop.repository.UserRepository;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-
-import jakarta.servlet.ServletContext;
 
 @Controller
 public class UserController {
