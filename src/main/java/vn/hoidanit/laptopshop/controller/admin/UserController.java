@@ -10,6 +10,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,6 +23,8 @@ import vn.hoidanit.laptopshop.service.UserService;
 import vn.hoidanit.laptopshop.domain.User;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+
+import jakarta.validation.Valid;
 
 @Controller
 public class UserController {
@@ -69,8 +73,18 @@ public class UserController {
 
     @PostMapping("/admin/user/create")
     public String createUserPage(Model model,
-            @ModelAttribute("newUser") User stall,
+            @ModelAttribute("newUser") @Valid User stall, BindingResult newUserBindingResult,
             @RequestParam("stallFile") MultipartFile file) {
+        // validate
+
+        List<FieldError> errors = newUserBindingResult.getFieldErrors();
+        for (FieldError error : errors) {
+            System.out.println(error.getField() + " - " + error.getDefaultMessage());
+        }
+        if (newUserBindingResult.hasErrors()) {
+            return "/admin/user/create";
+        }
+
         String avatar = this.uploadService.handleSaveUploadFile(file, "avatar"); // luu ten file
         String hashPassword = this.passwordEncoder.encode(stall.getPassword());
         stall.setAvatar(avatar);
@@ -89,7 +103,7 @@ public class UserController {
         return "admin/user/update";
     }
 
-    @PostMapping("/admin/user/update") // GET
+    @PostMapping("/admin/user/update")
     public String postUpdateUser(Model model, @ModelAttribute("updateUser") User stall,
             @RequestParam("stallFile") MultipartFile file) {
         User currentUser = this.userService.getUserById(stall.getId());
