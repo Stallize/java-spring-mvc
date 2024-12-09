@@ -58,12 +58,12 @@
                                             <div class="card-body">
                                                 <form>
                                                     <div class="form-floating mb-3">
-                                                        <input class="form-control" id="inputEmail" type="email"
+                                                        <input class="form-control" type="email"
                                                             placeholder="name@example.com" />
                                                         <label for="inputEmail">Email address</label>
                                                     </div>
                                                     <div class="form-floating mb-3">
-                                                        <input class="form-control" id="inputPassword" type="password"
+                                                        <input class="form-control" type="password"
                                                             placeholder="Password" />
                                                         <label for="inputPassword">Password</label>
                                                     </div>

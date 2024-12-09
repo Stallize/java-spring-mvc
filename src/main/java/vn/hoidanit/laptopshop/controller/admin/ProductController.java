@@ -56,7 +56,7 @@ public class ProductController {
             System.out.println(error.getField() + " - " + error.getDefaultMessage());
         }
         if (newProductBindingResult.hasErrors()) {
-            return "/admin/product/create";
+            return "admin/product/create";
         }
 
         String productImg = this.uploadService.handleSaveUploadFile(file, "product"); // luu ten file
@@ -80,7 +80,7 @@ public class ProductController {
     public String getUpdateProductPage(Model model, @PathVariable long id) {
         Product currentProduct = this.productService.getProductById(id);
         model.addAttribute("updateProduct", currentProduct);
-        return "/admin/product/update";
+        return "admin/product/update";
     }
 
     @PostMapping("/admin/product/update") // GET
@@ -91,7 +91,7 @@ public class ProductController {
         if (newProductBindingResult.hasErrors()) {
 
             model.addAttribute("image", currentProduct.getImage());
-            return "/admin/product/update";
+            return "admin/product/update";
         }
         if (currentProduct != null) {
             if (!file.isEmpty()) {

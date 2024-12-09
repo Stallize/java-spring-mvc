@@ -41,14 +41,16 @@ public class UserController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @RequestMapping("/")
-    public String getHomePage(Model model) {
-        // String test = this.userService.handleHello(); // gọi tới model
-        List<User> arrUsers = this.userService.getAllUsersByEmail("1@gmail.com");
-        System.out.println(arrUsers);
-        model.addAttribute("stall", "test"); // model sau khi có data thì gửi lại tới controller
-        return "hello"; // controller sau khi xử lí data thì gửi lại cho view , view render ra dữ liệu
-    }
+    // @RequestMapping("/")
+    // public String getHomePage(Model model) {
+    // // String test = this.userService.handleHello(); // gọi tới model
+    // List<User> arrUsers = this.userService.getAllUsersByEmail("1@gmail.com");
+    // System.out.println(arrUsers);
+    // model.addAttribute("stall", "test"); // model sau khi có data thì gửi lại tới
+    // controller
+    // return "hello"; // controller sau khi xử lí data thì gửi lại cho view , view
+    // render ra dữ liệu
+    // }
 
     @RequestMapping("/admin/user")
     public String getUserPage(Model model) {
@@ -82,7 +84,7 @@ public class UserController {
             System.out.println(error.getField() + " - " + error.getDefaultMessage());
         }
         if (newUserBindingResult.hasErrors()) {
-            return "/admin/user/create";
+            return "admin/user/create";
         }
 
         String avatar = this.uploadService.handleSaveUploadFile(file, "avatar"); // luu ten file
