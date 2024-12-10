@@ -1,6 +1,7 @@
 package vn.hoidanit.laptopshop.controller.admin;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +34,7 @@ public class ProductController {
 
     @GetMapping("/admin/product")
     public String getProductPage(Model model) {
-        List<Product> products = this.productService.getAllProducts();
+        List<Product> products = this.productService.fetchProducts();
         model.addAttribute("product", products); // "user" la gia tri nhan duoc ben view , users la bien o tren gan vao
         return "admin/product/show";
     }
@@ -70,7 +71,7 @@ public class ProductController {
 
     @GetMapping("/admin/product/{id}")
     public String getProductDetailPage(Model model, @PathVariable long id) {
-        Product productDetail = this.productService.getProductById(id);
+        Product productDetail = this.productService.fetchProductById(id).get();
         model.addAttribute("id", id);
         model.addAttribute("productDetail", productDetail);
         return "admin/product/detail";
@@ -78,8 +79,8 @@ public class ProductController {
 
     @GetMapping("/admin/product/update/{id}") // GET
     public String getUpdateProductPage(Model model, @PathVariable long id) {
-        Product currentProduct = this.productService.getProductById(id);
-        model.addAttribute("updateProduct", currentProduct);
+        Optional<Product> currentProduct = this.productService.fetchProductById(id);
+        model.addAttribute("updateProduct", currentProduct.get());
         return "admin/product/update";
     }
 
@@ -87,7 +88,7 @@ public class ProductController {
     public String postUpdateProduct(Model model, @ModelAttribute("updateProduct") @Valid Product stallProduct,
             BindingResult newProductBindingResult,
             @RequestParam("productFile") MultipartFile file) {
-        Product currentProduct = this.productService.getProductById(stallProduct.getId());
+        Product currentProduct = this.productService.fetchProductById(stallProduct.getId()).get();
         if (newProductBindingResult.hasErrors()) {
 
             model.addAttribute("image", currentProduct.getImage());

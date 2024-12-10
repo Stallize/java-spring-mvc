@@ -11,7 +11,7 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Long> {
     Product save(Product stallProduct);
 
-    Product findById(long id);
+    // Product findById(long id);
 
     List<Product> findAll();
 

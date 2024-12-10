@@ -9,7 +9,11 @@
                     class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <span style="color:white;">Welcome,Dương</span>
+                <span style="color:white;">
+                    <div class="text-center my-3">
+                        <c:out value="${pageContext.request.userPrincipal.name}" />
+                    </div>
+                </span>
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -22,7 +26,14 @@
                         <li>
                             <hr class="dropdown-divider" />
                         </li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li>
+                            <form method="post" action="/logout">
+
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+
+                                <button class="dropdown-item">Đăng xuất</button>
+                            </form>
+                        </li>
                     </ul>
                 </li>
             </ul>
