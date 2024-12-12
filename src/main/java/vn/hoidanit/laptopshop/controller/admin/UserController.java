@@ -5,7 +5,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -20,6 +24,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import vn.hoidanit.laptopshop.service.UploadService;
 import vn.hoidanit.laptopshop.service.UserService;
+import vn.hoidanit.laptopshop.domain.Product;
 import vn.hoidanit.laptopshop.domain.User;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,9 +58,26 @@ public class UserController {
     // }
 
     @RequestMapping("/admin/user")
-    public String getUserPage(Model model) {
-        List<User> users = this.userService.getAllUsers();
-        model.addAttribute("user", users); // "user" la gia tri nhan duoc ben view , users la bien o tren gan vao
+    public String getUserPage(Model model, @RequestParam("page") Optional<String> pageOptional) {
+        int page = 1;
+        try {
+            if (pageOptional.isPresent()) {
+                // convert
+                page = Integer.parseInt(pageOptional.get());
+            } else {
+                // mac dinh page = 1
+            }
+        } catch (Exception e) {
+            // page = 1
+            // to do : handle exception
+        }
+        Pageable pageable = PageRequest.of(page - 1, 2);
+        Page<User> users = this.userService.getAllUsers(pageable);
+        List<User> listUsers = users.getContent();
+
+        model.addAttribute("user", listUsers); // "user" la gia tri nhan duoc ben view , users la bien o tren gan vao
+        model.addAttribute("currentPage", page);
+        model.addAttribute("totalPages", users.getTotalPages());
         return "admin/user/show";
     }
 
