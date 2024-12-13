@@ -65,7 +65,7 @@
                                 <div class="row g-4 fruite">
                                     <div class="col-12 col-md-4">
                                         <div class="row g-4">
-                                            <div class="col-12" id="factoryFilter">
+                                            <!-- <div class="col-12" id="factoryFilter">
                                                 <div class="mb-2"><b>Hãng sản xuất</b></div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" id="factory-1"
@@ -168,8 +168,9 @@
                                                     <label class="form-check-label" for="price-5">Trên 20
                                                         triệu</label>
                                                 </div>
-                                            </div>
-                                            <div class="col-12">
+                                            </div> -->
+
+                                            <!-- <div class="col-12">
                                                 <div class="mb-2"><b>Sắp xếp</b></div>
 
                                                 <div class="form-check form-check-inline">
@@ -200,6 +201,41 @@
                                                     id="btnFilter">
                                                     Lọc Sản Phẩm
                                                 </button>
+                                            </div> -->
+                                            <div class="col-12">
+                                                <h4>Categories</h4>
+                                                <ul class="list-unstyled fruite-categorie">
+                                                    <li>
+                                                        <div class="d-flex justify-content-between fruite-name">
+                                                            <a href="/products?name=asus"><i
+                                                                    class="fas me-2"></i>Asus</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex justify-content-between fruite-name">
+                                                            <a href="/products?name=macbook"><i
+                                                                    class="fas me-2"></i>Apple</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex justify-content-between fruite-name">
+                                                            <a href="/products?name=acer"><i
+                                                                    class="fas me-2"></i>Acer</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex justify-content-between fruite-name">
+                                                            <a href="/products?name=lenovo"><i
+                                                                    class="fas me-2"></i>Lenovo</a>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="d-flex justify-content-between fruite-name">
+                                                            <a href="/products?name=Dell"><i
+                                                                    class="fas me-2"></i>Dell</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
