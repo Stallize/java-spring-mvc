@@ -53,7 +53,7 @@
                                     <div class="col-lg-5">
                                         <div class="card shadow-lg border-0 rounded-lg mt-5">
                                             <div class="card-header">
-                                                <h3 class="text-center font-weight-light my-4">Login</h3>
+                                                <h3 class="text-center font-weight-light my-4">Đăng nhập</h3>
                                             </div>
                                             <div class="card-body">
                                                 <form method="post" action="/login">
@@ -83,15 +83,16 @@
                                                     </div>
                                                     <div class="mt-4 mb-0">
                                                         <div class="d-grid">
-                                                            <button type="submit" class="btn btn-primary btn-block">
-                                                                Login
+                                                            <button type="submit" class="btn btn-secondary btn-block">
+                                                                Đăng nhập
                                                             </button>
                                                         </div>
                                                     </div>
                                                 </form>
                                             </div>
                                             <div class="card-footer text-center py-3">
-                                                <div class="small"><a href="/register">Need an account? Sign up!</a>
+                                                <div class="small"><a href="/register">Chưa có tài khoản? Đăng ký tại
+                                                        đây!</a>
                                                 </div>
                                             </div>
                                         </div>

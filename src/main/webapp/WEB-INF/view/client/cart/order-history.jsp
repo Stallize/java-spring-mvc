@@ -8,7 +8,7 @@
                 <head>
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Document</title>
+                    <title>Lịch sử đặt hàng</title>
                     <link rel="preconnect" href="https://fonts.googleapis.com">
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                     <link
@@ -75,7 +75,7 @@
                                         <c:if test="${ empty orders}">
                                             <tr>
                                                 <td colspan="6">
-                                                    Không có sản phẩm trong giỏ hàng
+                                                    Bạn không có đơn hàng nào!
                                                 </td>
                                             </tr>
                                         </c:if>

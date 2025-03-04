@@ -10,9 +10,22 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="" />
                 <meta name="author" content="" />
-                <title>Cập nhập người dùng - Laptopshop</title>
+                <title>Cập nhập người dùng - Stationery</title>
                 <link href="/css/styles.css" rel="stylesheet" />
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                <script>
+                    //jquery , neu web load thi chay code, lay id input avatarFile ,them event onChange,chay vao function lay ra duong link url web api de hien thi anh
+                    //,jquery them attr src , chinh css
+                    $(document).ready(() => {
+                        const avatarFile = $("#avatarFile");
+                        avatarFile.change(function (e) {
+                            const imgURL = URL.createObjectURL(e.target.files[0]);
+                            $("#avatarPreview").attr("src", imgURL);
+                            $("#avatarPreview").css({ "display": "block" });
+                        });
+                    });
+                </script>
             </head>
 
             <body class="sb-nav-fixed">
@@ -69,7 +82,7 @@
                                             </div>
                                             <div class="col-12 mb-5">
                                                 <img style="max-height: 250px;display: none;" alt="avatar preview"
-                                                    id="avatarPreview" />
+                                                    id="avatarPreview" src="/images/avatar/${image}" />
                                             </div>
                                             <button type="submit" class="btn btn-warning">Update</button>
                                         </form:form>

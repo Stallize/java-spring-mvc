@@ -8,7 +8,7 @@
                 <head>
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Document</title>
+                    <title>Giỏ hàng</title>
                     <link rel="preconnect" href="https://fonts.googleapis.com">
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                     <link
@@ -175,7 +175,7 @@
                                                 <div style="display: block;">
                                                     <c:forEach var="cartDetail" items="${cart.cartDetails}"
                                                         varStatus="status">
-                                                        <div class="mb-3">
+                                                        <div class="mb-3" style="display:none">
                                                             <div class="form-group">
                                                                 <label>Id:</label>
                                                                 <form:input class="form-control" type="text"

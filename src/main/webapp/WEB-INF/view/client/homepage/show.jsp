@@ -6,7 +6,7 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Laptopshop</title>
+                <title>Stationery</title>
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link
@@ -62,7 +62,7 @@
                                     <ul class="nav nav-pills d-inline-flex text-center mb-5">
                                         <li class="nav-item">
                                             <a class="d-flex m-2 py-2 bg-light rounded-pill active" href="/products">
-                                                <span class="text-dark" style="width: 130px;">All Products</span>
+                                                <span class="text-dark" style="width: 130px;">Tất cả sản phẩm</span>
                                             </a>
                                         </li>
 
@@ -107,7 +107,7 @@
                                                                         <button
                                                                             class="mx-auto btn border border-secondary rounded-pill px-3 text-primary"><i
                                                                                 class="fa fa-shopping-bag me-2 text-primary"></i>
-                                                                            Add to cart
+                                                                            Thêm vào giỏ hàng
                                                                         </button>
                                                                     </form>
                                                                 </div>

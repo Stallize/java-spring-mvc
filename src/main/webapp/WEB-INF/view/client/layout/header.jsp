@@ -5,7 +5,7 @@
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
                     <a href="/" class="navbar-brand">
-                        <h1 class="text-primary display-6">Laptopshop</h1>
+                        <h1 class="text-primary display-6">Stationery</h1>
                     </a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
@@ -13,8 +13,9 @@
                     </button>
                     <div class="collapse navbar-collapse bg-white justify-content-between mx-5" id="navbarCollapse">
                         <div class="navbar-nav">
-                            <a href="/" class="nav-item nav-link active">Trang chủ</a>
+                            <a href="/" class="nav-item nav-link">Trang chủ</a>
                             <a href="/products" class="nav-item nav-link">Sản phẩm</a>
+                            <a href="/contact" class="nav-item nav-link">Liên hệ</a>
 
                         </div>
                         <div class="d-flex m-3 me-0">
@@ -31,7 +32,7 @@
                                     <a href="#" class="dropdown" role="button" id="dropdownMenuLink"
                                         data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="dropdown"
                                         aria-expanded="false">
-                                        <i class="fas fa-user fa-2x"></i>
+                                        <i class="far fa-user fa-2x"></i>
                                     </a>
 
                                     <ul class="dropdown-menu dropdown-menu-end p-4" aria-labelledby="dropdownMenuLink">

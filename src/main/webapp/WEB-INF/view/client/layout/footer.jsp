@@ -7,11 +7,11 @@
                     <div class="row g-4">
                         <div class="col-lg-3">
                             <a href="#">
-                                <h1 class="text-primary mb-0">Laptopshop</h1>
-                                <p class="text-secondary mb-0">Sản phẩm chất lượng</p>
+                                <h1 class="text-primary mb-0">Stationery</h1>
+                                <p class="text-secondary mb-0">Bé yêu phong cách – Cả nhà hạnh phúc!</p>
                             </a>
                         </div>
-                        <div class="col-lg-3">
+                        <!-- <div class="col-lg-3">
                             <div class="d-flex justify-content-end pt-3">
                                 <a class="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href=""><i
                                         class="fab fa-twitter"></i></a>
@@ -22,18 +22,18 @@
                                 <a class="btn btn-outline-secondary btn-md-square rounded-circle" href=""><i
                                         class="fab fa-linkedin-in"></i></a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
                             <h4 class="text-light mb-3">Đề cao chất lượng</h4>
-                            <p class="mb-4">Chúng tôi mang đến những sản phẩm Laptop chất lượng , với giá cả vô cùng
-                                phải chăng.</p>
+                            <p class="mb-4">Chúng tôi mang đến những sản phẩm chất lượng , với giá cả vô cùng
+                                phải chăng cho khách hàng.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <!-- <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                             <h4 class="text-light mb-3">Shop Info</h4>
                             <a class="btn-link" href="">About Us</a>
@@ -44,13 +44,13 @@
                             <h4 class="text-light mb-3">Account</h4>
                             <a class="btn-link" href="">My Account</a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
-                            <h4 class="text-light mb-3">Contact</h4>
-                            <p>Address: Hà Nội , Việt Nam</p>
+                            <h4 class="text-light mb-3">Liên hệ</h4>
+                            <p>Địa chỉ: Hà Nội , Việt Nam</p>
                             <p>Email: duongtaymo2711@gmail.com</p>
-                            <p>Phone: +84 9 7244 8096</p>
+                            <p>Điện thoại: +84 9 7244 8096</p>
                         </div>
                     </div>
 

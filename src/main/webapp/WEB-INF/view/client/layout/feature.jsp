@@ -10,8 +10,8 @@
                                 <i class="fas fa-car-side fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>Miễn phí vận chuyển</h5>
-                                <p class="mb-0">Miễn phí vận chuyển cho đơn hàng trên 20 Triệu</p>
+                                <h5>Vận chuyển nhanh gọn</h5>
+                                <p class="mb-0">Miễn phí vận chuyển </p>
                             </div>
                         </div>
                     </div>

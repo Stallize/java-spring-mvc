@@ -5,10 +5,14 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
-                        <h4 class="mb-3 text-secondary">100% Sản phẩm chính hãng</h4>
-                        <h1 class="mb-5 display-3 text-primary">Hàng cao cấp <br /> Chất lượng số 1</h1>
+                        <h4 class="mb-3 text-banner">100% Sản phẩm chính hãng</h4>
+                        <h1 class="mb-5 display-4 text-banner" style="color:white">Sản phẩm chất lượng tốt <br />
+                            Giá cả phải chăng
+                        </h1>
+                        <a class="mx-auto btn border border-secondary rounded-pill px-3 text-banner"
+                            style="background-color: orange;" href="/products">Mua ngay tại đây</a>
                     </div>
-                    <div class="col-md-12 col-lg-5">
+                    <!-- <div class="col-md-12 col-lg-5">
                         <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active rounded">
@@ -33,7 +37,7 @@
                                 <span class="visually-hidden">Tiếp theo</span>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

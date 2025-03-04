@@ -10,7 +10,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                 <meta name="description" content="" />
                 <meta name="author" content="" />
-                <title>Cập nhập sản phẩm - Laptopshop</title>
+                <title>Cập nhập sản phẩm - Stationery</title>
                 <link href="/css/styles.css" rel="stylesheet" />
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -113,28 +113,27 @@
                                                     ${errorQuantity}
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
-
                                                     <label class="form-label">Factory:</label>
                                                     <form:select class="form-select" path="factory">
-                                                        <form:option value="APPLE">Apple(MacBook)</form:option>
-                                                        <form:option value="WINDOWS">Asus</form:option>
-                                                        <form:option value="LENOVO">Lenovo</form:option>
-                                                        <form:option value="DELL">Dell</form:option>
-                                                        <form:option value="LG">LG</form:option>
-                                                        <form:option value="ACER">Acer</form:option>
+                                                        <form:option value="RABITY">Rabity</form:option>
+                                                        <form:option value="PUFFTECH">Pufftech</form:option>
+                                                        <form:option value="DRY-EX">DRY-EX</form:option>
+                                                        <form:option value="AIRISM">AIRISM</form:option>
+                                                        <form:option value="UNIQLO">Uniqlo</form:option>
+                                                        <form:option value="HM">H&M</form:option>
                                                     </form:select>
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">
-
                                                     <label class="form-label">Target:</label>
                                                     <form:select class="form-select" path="target">
-                                                        <form:option value="GAMING">Gaming</form:option>
-                                                        <form:option value="SINHVIEN-VANPHONG">Sinh Viên - Văn Phòng
+                                                        <form:option value="AO-KHOAC">Áo Khoác</form:option>
+                                                        <form:option value="AO-THUN">Áo Thun
                                                         </form:option>
-                                                        <form:option value="THIET-KE-DO-HOA">Thiết kế đồ họa
+                                                        <form:option value="QUAN">Quần
                                                         </form:option>
-                                                        <form:option value="MONG-NHE">Mỏng nhẹ</form:option>
-                                                        <form:option value="DOANH-NHAN">Doanh nhân</form:option>
+                                                        <form:option value="DO-NGU">Đồ Ngủ</form:option>
+                                                        <form:option value="PHU-KIEN">Phụ kiện</form:option>
+                                                        <form:option value="BA-LO">Ba Lô</form:option>
                                                     </form:select>
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">

@@ -18,7 +18,7 @@
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #81C408;
+    --bs-primary: #F98866;
     --bs-secondary: #FFB524;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -234,7 +234,7 @@ sup {
 }
 
 a {
-    color: #13c01b;
+    color: #F98866;
     text-decoration: none
 }
 
@@ -8343,8 +8343,12 @@ fieldset:disabled .btn {
     word-break: break-word !important
 }
 
+.text-banner {
+    color: white !important
+}
+
 .text-primary {
-    color: #81c408 !important
+    color: #F98866 !important
 }
 
 .text-secondary {
