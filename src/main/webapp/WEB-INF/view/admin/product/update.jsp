@@ -128,14 +128,29 @@
                                                 <div class="mb-3 col-12 col-md-6">
                                                     <label class="form-label">Target:</label>
                                                     <form:select class="form-select" path="target">
-                                                        <form:option value="AO-KHOAC">Áo Khoác</form:option>
-                                                        <form:option value="AO-THUN">Áo Thun
+                                                        <form:option value="Áo-Khoác">Áo Khoác</form:option>
+                                                        <form:option value="Áo-Thun">Áo Thun
                                                         </form:option>
-                                                        <form:option value="QUAN">Quần
+                                                        <form:option value="Quần">Quần
                                                         </form:option>
-                                                        <form:option value="DO-NGU">Đồ Ngủ</form:option>
-                                                        <form:option value="PHU-KIEN">Phụ kiện</form:option>
-                                                        <form:option value="BA-LO">Ba Lô</form:option>
+                                                        <form:option value="Đồ-Ngủ">Đồ Ngủ</form:option>
+                                                        <form:option value="Phụ-Kiện">Phụ kiện</form:option>
+                                                        <form:option value="Ba-Lô">Ba Lô</form:option>
+                                                    </form:select>
+                                                </div>
+                                                <div class="mb-3 col-12 col-md-6">
+                                                    <label class="form-label">Size:</label>
+                                                    <form:select class="form-select" path="size">
+                                                        <form:option value="Dưới-1-Tuổi">Cho trẻ dưới 1 tuổi
+                                                        </form:option>
+                                                        <form:option value="Từ-1-đến-3-Tuổi">Cho trẻ 1 - 3 tuổi
+                                                        </form:option>
+                                                        <form:option value="Từ-3-đến-5-Tuổi">Cho trẻ 3 - 5 tuổi
+                                                        </form:option>
+                                                        <form:option value="Từ-5-đến-7-Tuổi">Cho trẻ 5 - 7 tuổi
+                                                        </form:option>
+                                                        <form:option value="Trên-7-Tuổi">Cho trẻ trên 7 tuổi
+                                                        </form:option>
                                                     </form:select>
                                                 </div>
                                                 <div class="mb-3 col-12 col-md-6">

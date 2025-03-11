@@ -39,9 +39,9 @@
                                                 <tr>
                                                     <th scope="col">ID</th>
                                                     <th scope="col">Email</th>
-                                                    <th scope="col">Full Name</th>
-                                                    <th scope="col">Role</th>
-                                                    <th scope="col">Action</th>
+                                                    <th scope="col">Họ và tên</th>
+                                                    <th scope="col">Vai trò</th>
+                                                    <th scope="col">Chức năng</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -53,11 +53,11 @@
                                                         <td>${user.role.getName()}</td>
                                                         <td>
                                                             <a href="/admin/user/${user.id}"
-                                                                class="btn btn-success">View</a>
+                                                                class="btn btn-success">Xem</a>
                                                             <a href="/admin/user/update/${user.id}"
-                                                                class="btn btn-warning">Update</a>
+                                                                class="btn btn-warning">Cập nhật</a>
                                                             <a href="/admin/user/delete/${user.id}"
-                                                                class="btn btn-danger">Delete</a>
+                                                                class="btn btn-danger">Xóa</a>
                                                         </td>
                                                     </tr>
                                                 </c:forEach>

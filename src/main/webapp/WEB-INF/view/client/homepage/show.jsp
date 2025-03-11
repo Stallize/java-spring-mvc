@@ -92,8 +92,10 @@
                                                                         ${product.name}
                                                                     </a>
                                                                 </h4>
-                                                                <p style="font-size: 13px;height:100px;">
+                                                                <p style="font-size: 13px;height:75px;">
                                                                     ${product.shortDesc}</p>
+                                                                <p style="font-size: 13px;height:10px;">
+                                                                    Dành cho trẻ ${product.size}</p>
                                                                 <div class="d-flex flex-lg-wrap justify-content-center">
                                                                     <p style="font-size: 15px;text-align: center;width: 100%;"
                                                                         class="text-dark fw-bold mb-3">

@@ -105,37 +105,70 @@
                                                 <div class="mb-2"><b>Mục đích sử dụng</b></div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" id="target-1"
-                                                        value="AO-KHOAC">
+                                                        value="Áo-Khoác">
                                                     <label class="form-check-label" for="target-1">Áo Khoác</label>
                                                 </div>
 
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" id="target-2"
-                                                        value="AO-THUN">
+                                                        value="Áo-Thun">
                                                     <label class="form-check-label" for="target-2">Áo Thun</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" id="target-3"
-                                                        value="QUAN">
+                                                        value="Quần">
                                                     <label class="form-check-label" for="target-3">Quần</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" id="target-4"
-                                                        value="DO-NGU">
+                                                        value="Đồ-Ngủ">
                                                     <label class="form-check-label" for="target-4">Đồ Ngủ</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" id="target-5"
-                                                        value="PHU-KIEN">
+                                                        value="Phụ-Kiện">
                                                     <label class="form-check-label" for="target-5">Phụ kiện</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="checkbox" id="target-5"
-                                                        value="BA-LO">
+                                                        value="Ba-Lô">
                                                     <label class="form-check-label" for="target-5">Ba Lô</label>
                                                 </div>
 
 
+                                            </div>
+
+                                            <div class="col-12" id="sizeFilter">
+                                                <div class="mb-2"><b>Lọc theo Size:</b></div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="size-1"
+                                                        value="Dưới-1-Tuổi">
+                                                    <label class="form-check-label" for="target-1">Dưới 1 tuổi </label>
+                                                </div>
+
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="size-2"
+                                                        value="Từ-1-đến-3-Tuổi">
+                                                    <label class="form-check-label" for="target-2">Từ 1 đến 3
+                                                        tuổi</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="size-3"
+                                                        value="Từ-3-đến-5-Tuổi">
+                                                    <label class="form-check-label" for="target-3">Từ 3 đến 5
+                                                        tuổi</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="size-4"
+                                                        value="Từ-5-đến-7-Tuổi">
+                                                    <label class="form-check-label" for="target-4">Từ 5 đến 7
+                                                        tuổi</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="size-5"
+                                                        value="Trên-7-Tuổi">
+                                                    <label class="form-check-label" for="target-5">Trên 7 tuổi</label>
+                                                </div>
                                             </div>
                                             <div class="col-12" id="priceFilter">
                                                 <div class="mb-2"><b>Mức giá</b></div>
@@ -226,8 +259,10 @@
                                                                     ${product.name}
                                                                 </a>
                                                             </h4>
-                                                            <p style="font-size: 13px;height: 100px;">
+                                                            <p style="font-size: 13px;height:80px;">
                                                                 ${product.shortDesc}</p>
+                                                            <p style="font-size: 13px;height:10px;">
+                                                                Dành cho trẻ ${product.size}</p>
                                                             <div
                                                                 class="d-flex  flex-lg-wrap justify-content-center flex-column">
                                                                 <p class="text-dark fs-5 fw-bold mb-0">

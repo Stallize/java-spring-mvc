@@ -54,6 +54,7 @@ public class ProductService {
     public Page<Product> fetchProductsWithSpec(Pageable page, ProductCriteriaDTO productCriteriaDTO) {
         if (productCriteriaDTO.getTarget() == null
                 && productCriteriaDTO.getFactory() == null
+                && productCriteriaDTO.getSize() == null
                 && productCriteriaDTO.getPrice() == null) {
             return this.productRepository.findAll(page);
         }
@@ -66,6 +67,10 @@ public class ProductService {
         }
         if (productCriteriaDTO.getFactory() != null && productCriteriaDTO.getFactory().isPresent()) {
             Specification<Product> currentSpecs = ProductSpecs.matchListFactory(productCriteriaDTO.getFactory().get());
+            combinedSpec = combinedSpec.and(currentSpecs);
+        }
+        if (productCriteriaDTO.getSize() != null && productCriteriaDTO.getSize().isPresent()) {
+            Specification<Product> currentSpecs = ProductSpecs.matchListSize(productCriteriaDTO.getSize().get());
             combinedSpec = combinedSpec.and(currentSpecs);
         }
 
@@ -237,6 +242,14 @@ public class ProductService {
                     orderDetail.setProduct(cd.getProduct());
                     orderDetail.setPrice(cd.getPrice());
                     orderDetail.setQuantity(cd.getQuantity());
+                    Product product = cd.getProduct();
+                    long newQuantity = product.getQuantity() - cd.getQuantity();
+                    if (newQuantity < 0) {
+                        throw new RuntimeException("Số lượng sản phẩm không đủ!");
+                    }
+                    product.setQuantity(newQuantity);
+                    product.setSold(cd.getQuantity());
+                    this.productRepository.save(product);
                     this.orderDetailRepository.save(orderDetail);
                 }
 

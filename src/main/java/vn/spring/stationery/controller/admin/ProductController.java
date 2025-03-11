@@ -125,6 +125,7 @@ public class ProductController {
             currentProduct.setQuantity(stallProduct.getQuantity());
             currentProduct.setFactory(stallProduct.getFactory());
             currentProduct.setTarget(stallProduct.getTarget());
+            currentProduct.setSize(stallProduct.getSize());
             this.productService.handleSaveProduct(currentProduct);
         }
         model.addAttribute("updateProduct", currentProduct);

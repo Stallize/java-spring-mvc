@@ -59,6 +59,9 @@
                                                 <li class="list-group-item">ID:${productDetail.id}</li>
                                                 <li class="list-group-item">Name:${productDetail.name}</li>
                                                 <li class="list-group-item">Price:${productDetail.price}</li>
+                                                <li class="list-group-item">Factory:${productDetail.factory}</li>
+                                                <li class="list-group-item">Target:${productDetail.target}</li>
+                                                <li class="list-group-item">Size:${productDetail.size}</li>
                                             </ul>
                                         </div>
 

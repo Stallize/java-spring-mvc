@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class ItemController {
@@ -163,16 +164,20 @@ public class ItemController {
     public String handlePlaceOrder(HttpServletRequest request,
             @RequestParam("receiverName") String receiverName,
             @RequestParam("receiverAddress") String receiverAddress,
-            @RequestParam("receiverPhone") String receiverPhone) {
+            @RequestParam("receiverPhone") String receiverPhone, RedirectAttributes redirectAttributes) {
 
         User currentUser = new User(); // null
         HttpSession session = request.getSession(false);
         long id = (long) session.getAttribute("id");
         currentUser.setId(id);
-
-        this.productService.handlePlaceOrder(currentUser, session, receiverName, receiverAddress, receiverPhone);
-
-        return "redirect:/thanks";
+        try {
+            this.productService.handlePlaceOrder(currentUser, session, receiverName, receiverAddress, receiverPhone);
+            redirectAttributes.addFlashAttribute("successMessage", "Đặt hàng thành công!");
+            return "redirect:/thanks";
+        } catch (RuntimeException e) {
+            redirectAttributes.addFlashAttribute("errorMessage", e.getMessage());
+            return "redirect:/cart";
+        }
     }
 
     @GetMapping("/thanks")

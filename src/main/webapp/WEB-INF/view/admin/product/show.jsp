@@ -40,10 +40,12 @@
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">ID</th>
-                                                        <th scope="col">Name</th>
-                                                        <th scope="col">Price</th>
-                                                        <th scope="col">Factory</th>
-                                                        <th scope="col">Action</th>
+                                                        <th scope="col">Tên sản phẩm</th>
+                                                        <th scope="col">Giá cả</th>
+                                                        <th scope="col">Nhà sản xuất</th>
+                                                        <th scope="col">Số lượng</th>
+                                                        <th scope="col">Đã bán</th>
+                                                        <th scope="col">Chức năng</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -57,13 +59,15 @@
                                                                 đ
                                                             </td>
                                                             <td>${product.factory}</td>
+                                                            <td>${product.quantity}</td>
+                                                            <td>${product.sold}</td>
                                                             <td>
                                                                 <a href="/admin/product/${product.id}"
-                                                                    class="btn btn-success">View</a>
+                                                                    class="btn btn-success">Xem</a>
                                                                 <a href="/admin/product/update/${product.id}"
-                                                                    class="btn btn-warning">Update</a>
+                                                                    class="btn btn-warning">Cập nhật</a>
                                                                 <a href="/admin/product/delete/${product.id}"
-                                                                    class="btn btn-danger">Delete</a>
+                                                                    class="btn btn-danger">Xóa</a>
                                                             </td>
                                                         </tr>
                                                     </c:forEach>

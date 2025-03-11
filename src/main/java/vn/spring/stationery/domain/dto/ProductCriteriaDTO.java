@@ -8,6 +8,7 @@ public class ProductCriteriaDTO {
     private Optional<List<String>> factory;
     private Optional<List<String>> target;
     private Optional<List<String>> price;
+    private Optional<List<String>> size;
     private Optional<String> sort;
 
     public Optional<String> getPage() {
@@ -32,6 +33,14 @@ public class ProductCriteriaDTO {
 
     public void setTarget(Optional<List<String>> target) {
         this.target = target;
+    }
+
+    public Optional<List<String>> getSize() {
+        return size;
+    }
+
+    public void setSize(Optional<List<String>> size) {
+        this.size = size;
     }
 
     public Optional<List<String>> getPrice() {

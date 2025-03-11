@@ -76,8 +76,9 @@
                                             <h5 class="fw-bold mb-3">
                                                 <fmt:formatNumber type="number" value="${detail.price}" /> đ
                                             </h5>
-                                            <p class="mb-4">${detail.target}</p>
-                                            <p class="mb-4">${detail.shortDesc}</p>
+                                            <p class="fw-bold mb-4" font-weight: bold;>${detail.target}</p>
+                                            <p class="fw-bold mb-4">Size: ${detail.size}</p>
+                                            <p class="mb-4">${detail.detailDesc}</p>
                                             <div class="input-group quantity mb-5" style="width: 100px;">
                                                 <div class="input-group-btn">
                                                     <button class="btn btn-sm btn-minus rounded-circle bg-light border">

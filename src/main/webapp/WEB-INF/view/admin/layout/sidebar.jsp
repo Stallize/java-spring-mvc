@@ -20,7 +20,7 @@
                         </a>
                         <a class="nav-link" href="/admin/order">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Quản lý đơn hàng
+                            Quản lí đơn hàng
                         </a>
 
                     </div>

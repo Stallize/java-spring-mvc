@@ -39,10 +39,10 @@
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">ID</th>
-                                                        <th scope="col">Total Price</th>
-                                                        <th scope="col">User</th>
-                                                        <th scope="col">Status</th>
-                                                        <th scope="col">Action</th>
+                                                        <th scope="col">Tổng giá</th>
+                                                        <th scope="col">Người dùng</th>
+                                                        <th scope="col">Trạng thái</th>
+                                                        <th scope="col">Chức năng</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -58,11 +58,11 @@
                                                             <td>${order.status}</td>
                                                             <td>
                                                                 <a href="/admin/order/${order.id}"
-                                                                    class="btn btn-success">View</a>
+                                                                    class="btn btn-success">Xem</a>
                                                                 <a href="/admin/order/update/${order.id}"
-                                                                    class="btn btn-warning">Update</a>
+                                                                    class="btn btn-warning">Cập nhật</a>
                                                                 <a href="/admin/order/delete/${order.id}"
-                                                                    class="btn btn-danger">Delete</a>
+                                                                    class="btn btn-danger">Xóa</a>
                                                             </td>
                                                         </tr>
                                                     </c:forEach>

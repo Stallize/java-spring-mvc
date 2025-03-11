@@ -71,7 +71,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                         <c:if test="${ empty cartDetails}">
                                             <tr>
                                                 <td colspan="6">
@@ -80,6 +79,12 @@
                                             </tr>
                                         </c:if>
                                         <c:forEach var="cartDetail" items="${cartDetails}" varStatus="status">
+                                            <c:if test="${not empty errorMessage}">
+                                                <div class="alert alert-danger">
+                                                    <p>${errorMessage} , chỉ còn ${cartDetail.product.quantity} sản phẩm
+                                                    </p>
+                                                </div>
+                                            </c:if>
                                             <tr>
                                                 <th scope=" row">
                                                     <div class="d-flex align-items-center">

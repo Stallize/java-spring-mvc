@@ -39,6 +39,11 @@ public class ProductSpecs {
         return (root, query, criteriaBuilder) -> criteriaBuilder.in(root.get(Product_.TARGET)).value(target);
     }
 
+    //
+    public static Specification<Product> matchListSize(List<String> size) {
+        return (root, query, criteriaBuilder) -> criteriaBuilder.in(root.get(Product_.SIZE)).value(size);
+    }
+
     // case5
     public static Specification<Product> matchPrice(double min, double max) {
         return (root, query, criteriaBuilder) -> criteriaBuilder.and(

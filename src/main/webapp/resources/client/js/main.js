@@ -221,6 +221,7 @@
 
         let factoryArr = [];
         let targetArr = [];
+        let sizeArr = [];
         let priceArr = [];
         //factory filter
         $("#factoryFilter .form-check-input:checked").each(function () {
@@ -230,6 +231,10 @@
         //target filter
         $("#targetFilter .form-check-input:checked").each(function () {
             targetArr.push($(this).val());
+        });
+        //size filter
+        $("#sizeFilter .form-check-input:checked").each(function () {
+            sizeArr.push($(this).val());
         });
 
         //price filter
@@ -250,6 +255,7 @@
         //reset
         searchParams.delete('factory');
         searchParams.delete('target');
+        searchParams.delete('size');
         searchParams.delete('price');
 
         if (factoryArr.length > 0) {
@@ -258,6 +264,10 @@
 
         if (targetArr.length > 0) {
             searchParams.set('target', targetArr.join(','));
+        }
+
+        if (sizeArr.length > 0) {
+            searchParams.set('size', sizeArr.join(','));
         }
 
         if (priceArr.length > 0) {
@@ -288,6 +298,13 @@
         });
     }
 
+    // Set checkboxes for 'size'
+    if (params.has('size')) {
+        const sizes = params.get('size').split(',');
+        sizes.forEach(size => {
+            $(`#sizeFilter .form-check-input[value="${size}"]`).prop('checked', true);
+        });
+    }
     // Set checkboxes for 'price'
     if (params.has('price')) {
         const prices = params.get('price').split(',');

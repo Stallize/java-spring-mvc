@@ -36,6 +36,7 @@ public class Product {
     private long sold;
     private String factory;
     private String target;
+    private String size;
 
     public long getId() {
         return id;
@@ -117,11 +118,19 @@ public class Product {
         this.target = target;
     }
 
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
     @Override
     public String toString() {
         return "Product [id=" + id + ", name=" + name + ", price=" + price + ", image=" + image + ", detailDesc="
                 + detailDesc + ", shortDesc=" + shortDesc + ", quantity=" + quantity + ", sold=" + sold + ", factory="
-                + factory + ", target=" + target + "]";
+                + factory + ", target=" + target + ", size=" + size + "]";
     }
 
 }
