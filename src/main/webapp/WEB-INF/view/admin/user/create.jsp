@@ -37,14 +37,16 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">Dashboard</h1>
+                                <h1 class="mt-4">Trang quản lí người dùng</h1>
                                 <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <li class="breadcrumb-item active">Trang chủ</li>
+                                    <li class="breadcrumb-item active">Quản lí người dùng</li>
+                                    <li class="breadcrumb-item active">Thêm người dùng</li>
                                 </ol>
                                 <div class="container mt-5">
                                     <div class="row">
                                         <div class="col-12 mx-auto">
-                                            <h1>Create a user</h1>
+                                            <h1>Tạo tài khoản</h1>
                                             <hr />
                                             <form:form method="POST" enctype="multipart/form-data"
                                                 action="/admin/user/create" modelAttribute="newUser" class="row g-3">
@@ -106,7 +108,7 @@
                                                         id="avatarPreview" />
                                                 </div>
                                                 <div class="col-12 mb-5">
-                                                    <button type="submit" class="btn btn-primary">Create</button>
+                                                    <button type="submit" class="btn btn-primary">Xác nhận</button>
                                                 </div>
                                             </form:form>
                                         </div>

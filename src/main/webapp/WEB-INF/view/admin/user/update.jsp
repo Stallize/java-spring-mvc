@@ -35,13 +35,15 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">Dashboard</h1>
+                                <h1 class="mt-4">Trang quản lí người dùng</h1>
                                 <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <li class="breadcrumb-item active">Trang chủ</li>
+                                    <li class="breadcrumb-item active">Quản lí người dùng</li>
+                                    <li class="breadcrumb-item active">Cập nhật người dùng</li>
                                 </ol>
                                 <div class="row">
                                     <div class="col-12 mx-auto">
-                                        <h1>Update a user</h1>
+                                        <h1>Cập nhật người dùng</h1>
                                         <hr />
                                         <form:form method="POST" enctype="multipart/form-data"
                                             action="/admin/user/update" modelAttribute="updateUser">
@@ -84,7 +86,7 @@
                                                 <img style="max-height: 250px;display: none;" alt="avatar preview"
                                                     id="avatarPreview" src="/images/avatar/${image}" />
                                             </div>
-                                            <button type="submit" class="btn btn-warning">Update</button>
+                                            <button type="submit" class="btn btn-warning">Cập nhật</button>
                                         </form:form>
                                     </div>
                                 </div>

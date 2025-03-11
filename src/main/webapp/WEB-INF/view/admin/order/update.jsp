@@ -30,16 +30,16 @@
                         <div id="layoutSidenav_content">
                             <main>
                                 <div class="container-fluid px-4">
-                                    <h1 class="mt-4">Orders</h1>
+                                    <h1 class="mt-4">Trang quản lí đơn hàng</h1>
                                     <ol class="breadcrumb mb-4">
-                                        <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="/admin/order">Order</a></li>
-                                        <li class="breadcrumb-item active">Update</li>
+                                        <li class="breadcrumb-item active">Trang chủ</li>
+                                        <li class="breadcrumb-item active">Quản lí đơn hàng</li>
+                                        <li class="breadcrumb-item active">Cập nhật đơn hàng</li>
                                     </ol>
                                     <div class=" mt-5">
                                         <div class="row">
                                             <div class="col-md-6 col-12 mx-auto">
-                                                <h3>Update a order</h3>
+                                                <h3>Cập nhật đơn hàng</h3>
                                                 <hr />
                                                 <form:form method="post" action="/admin/order/update" class="row"
                                                     modelAttribute="newOrder">

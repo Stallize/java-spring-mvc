@@ -37,19 +37,21 @@
                         <div id="layoutSidenav_content">
                             <main>
                                 <div class="container-fluid px-4">
-                                    <h1 class="mt-4">Dashboard</h1>
+                                    <h1 class="mt-4">Trang quản lí đơn hàng</h1>
                                     <ol class="breadcrumb mb-4">
-                                        <li class="breadcrumb-item active">Dashboard</li>
+                                        <li class="breadcrumb-item active">Trang chủ</li>
+                                        <li class="breadcrumb-item active">Quản lí đơn hàng</li>
+                                        <li class="breadcrumb-item active">Chi tiết đơn hàng</li>
                                     </ol>
                                     <div class="row">
                                         <div class="col-12 mx-auto">
                                             <div class="d-flex justify-content-between">
-                                                <h3>Order ${id} Detail </h3>
+                                                <h3>Thông tin đơn hàng số ${id} </h3>
                                             </div>
                                             <hr />
                                             <div class="card" style="width: 100%">
                                                 <div class="card-header">
-                                                    Order Information
+                                                    Thông tin đơn hàng
                                                 </div>
 
                                                 <table class="table table-bordered table-hover">

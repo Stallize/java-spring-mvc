@@ -24,17 +24,16 @@
                         <div id="layoutSidenav_content">
                             <main>
                                 <div class="container-fluid px-4">
-                                    <h1 class="mt-4">Dashboard</h1>
+                                    <h1 class="mt-4">Trang quản lí sản phẩm</h1>
                                     <ol class="breadcrumb mb-4">
-                                        <li class="breadcrumb-item active"><a href="/admin">Dashboard</a></li>
-                                        <li class="breadcrumb-item active">Products</li>
+                                        <li class="breadcrumb-item active">Trang chủ</li>
+                                        <li class="breadcrumb-item active">Quản lí sản phẩm</li>
                                     </ol>
                                     <div class="row">
                                         <div class="mx-auto">
                                             <div class="d-flex justify-content-between">
-                                                <h3>Table Product</h3>
-                                                <a href="/admin/product/create" class="btn btn-primary">Create a
-                                                    Product</a>
+                                                <h3>Sản phẩm</h3>
+                                                <a href="/admin/product/create" class="btn btn-primary">Tạo sản phẩm</a>
                                             </div>
                                             <hr />
                                             <table class="table table-bordered table-hover">

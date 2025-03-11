@@ -22,15 +22,16 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">Dashboard</h1>
+                                <h1 class="mt-4">Trang quản lí người dùng</h1>
                                 <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <li class="breadcrumb-item active">Trang chủ</li>
+                                    <li class="breadcrumb-item active">Quản lí người dùng</li>
+                                    <li class="breadcrumb-item active">Xóa người dùng</li>
                                 </ol>
-
                                 <div class="row">
                                     <div class="col-12 mx-auto">
                                         <div class="d-flex justify-content-between">
-                                            <h3>Delete User ${id}? </h3>
+                                            <h3>Xóa người dùng ${id}? </h3>
                                         </div>
                                         <hr />
                                         <div class="alert alert-danger" role="alert">

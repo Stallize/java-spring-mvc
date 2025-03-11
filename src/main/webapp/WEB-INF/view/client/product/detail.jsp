@@ -65,10 +65,9 @@
                                     <div class="row g-4">
                                         <div class="col-lg-6">
                                             <div class="border rounded">
-                                                <a href="#">
-                                                    <img src="/images/product/${detail.image}" class="img-fluid rounded"
-                                                        alt="Image">
-                                                </a>
+                                                <img src="/images/product/${detail.image}"
+                                                    style="width: 500px; height: 600px;" class="img-fluid rounded"
+                                                    alt="Image">
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
@@ -77,13 +76,6 @@
                                             <h5 class="fw-bold mb-3">
                                                 <fmt:formatNumber type="number" value="${detail.price}" /> đ
                                             </h5>
-                                            <div class="d-flex mb-4">
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star text-secondary"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
                                             <p class="mb-4">${detail.target}</p>
                                             <p class="mb-4">${detail.shortDesc}</p>
                                             <div class="input-group quantity mb-5" style="width: 100px;">
@@ -113,7 +105,7 @@
                                                 <button
                                                     class="btnAddToCartDetail btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary">
                                                     <i class="fa fa-shopping-bag me-2 text-primary"></i>
-                                                    Add to cart
+                                                    Thêm vào giỏ hàng
                                                 </button>
                                             </form>
                                         </div>
@@ -123,7 +115,7 @@
                                                     <button class="nav-link active border-white border-bottom-0"
                                                         type="button" role="tab" id="nav-about-tab" data-bs-toggle="tab"
                                                         data-bs-target="#nav-about" aria-controls="nav-about"
-                                                        aria-selected="true">Description</button>
+                                                        aria-selected="true">Mô tả sản phẩm</button>
                                                 </div>
                                             </nav>
                                             <div class="tab-content mb-5">

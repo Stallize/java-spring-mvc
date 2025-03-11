@@ -44,14 +44,16 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">Dashboard</h1>
+                                <h1 class="mt-4">Trang quản lí sản phẩm</h1>
                                 <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <li class="breadcrumb-item active">Trang chủ</li>
+                                    <li class="breadcrumb-item active">Quản lí sản phẩm</li>
+                                    <li class="breadcrumb-item active">Cập nhật sản phẩm</li>
                                 </ol>
                                 <div class="container mt-5">
                                     <div class="row">
                                         <div class="col-12 mx-auto">
-                                            <h1>Update a Product</h1>
+                                            <h1>Cập nhật sản phẩm</h1>
                                             <hr />
                                             <form:form method="POST" enctype="multipart/form-data"
                                                 action="/admin/product/update" modelAttribute="updateProduct"
@@ -146,7 +148,7 @@
                                                         id="productImagePreview" src="/images/product/${image}" />
                                                 </div>
                                                 <div class="col-12 mb-5">
-                                                    <button type="submit" class="btn btn-primary">Update</button>
+                                                    <button type="submit" class="btn btn-primary">Cập nhật</button>
                                                 </div>
                                             </form:form>
                                         </div>

@@ -24,15 +24,15 @@
                         <div id="layoutSidenav_content">
                             <main>
                                 <div class="container-fluid px-4">
-                                    <h1 class="mt-4">Dashboard</h1>
+                                    <h1 class="mt-4">Trang quản lí đơn hàng</h1>
                                     <ol class="breadcrumb mb-4">
-                                        <li class="breadcrumb-item active"><a href="/admin">Dashboard</a></li>
-                                        <li class="breadcrumb-item active">Orders</li>
+                                        <li class="breadcrumb-item active">Trang chủ</li>
+                                        <li class="breadcrumb-item active">Quản lí đơn hàng</li>
                                     </ol>
                                     <div class="row">
                                         <div class="mx-auto">
                                             <div class="d-flex justify-content-between">
-                                                <h3>Table Orders</h3>
+                                                <h3>Đơn hàng</h3>
                                             </div>
                                             <hr />
                                             <table class="table table-bordered table-hover">

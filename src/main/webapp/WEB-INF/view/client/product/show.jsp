@@ -211,20 +211,23 @@
                                                 <div class="col-md-6 col-lg-4">
                                                     <div class="rounded position-relative fruite-item">
                                                         <div class="fruite-img">
-                                                            <img src="/images/product/${product.image}"
-                                                                class="img-fluid w-100 rounded-top" alt="">
+                                                            <a href="/product/${product.id}">
+                                                                <img src="/images/product/${product.image}"
+                                                                    class="img-fluid w-100 rounded-top" alt="">
+                                                            </a>
                                                         </div>
                                                         <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
                                                             style="top: 10px; left: 10px;">${product.target}
                                                         </div>
                                                         <div
                                                             class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                            <h4 style="font-size: 15px;">
+                                                            <h4 style="font-size: 15px;height: 50px;">
                                                                 <a href="/product/${product.id}">
                                                                     ${product.name}
                                                                 </a>
                                                             </h4>
-                                                            <p style="font-size: 13px;">${product.shortDesc}</p>
+                                                            <p style="font-size: 13px;height: 100px;">
+                                                                ${product.shortDesc}</p>
                                                             <div
                                                                 class="d-flex  flex-lg-wrap justify-content-center flex-column">
                                                                 <p class="text-dark fs-5 fw-bold mb-0">

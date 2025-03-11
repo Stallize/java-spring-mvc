@@ -23,22 +23,22 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">Orders</h1>
+                                <h1 class="mt-4">Trang quản lí đơn hàng</h1>
                                 <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a href="/admin/order">Order</a></li>
-                                    <li class="breadcrumb-item active">Delete</li>
+                                    <li class="breadcrumb-item active">Trang chủ</li>
+                                    <li class="breadcrumb-item active">Quản lí đơn hàng</li>
+                                    <li class="breadcrumb-item active">Xóa đơn hàng</li>
                                 </ol>
                                 <div class=" mt-5">
                                     <div class="row">
                                         <div class="col-12 mx-auto">
                                             <div class="d-flex justify-content-between">
-                                                <h3>Delete the order with id = ${id}</h3>
+                                                <h3>Xóa đơn hàng số ${id}</h3>
                                             </div>
 
                                             <hr />
                                             <div class="alert alert-danger">
-                                                Are you sure to delete this order ?
+                                                Bạn có chắc chắn muốn xóa đơn hàng này không ?
                                             </div>
                                             <form:form method="post" action="/admin/order/delete"
                                                 modelAttribute="newOrder">

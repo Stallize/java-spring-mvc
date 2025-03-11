@@ -22,15 +22,16 @@
                     <div id="layoutSidenav_content">
                         <main>
                             <div class="container-fluid px-4">
-                                <h1 class="mt-4">Dashboard</h1>
+                                <h1 class="mt-4">Trang quản lí người dùng</h1>
                                 <ol class="breadcrumb mb-4">
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <li class="breadcrumb-item active">Trang chủ</li>
+                                    <li class="breadcrumb-item active">Quản lí người dùng</li>
                                 </ol>
                                 <div class="row">
                                     <div class="mx-auto">
                                         <div class="d-flex justify-content-between">
-                                            <h3>Table user</h3>
-                                            <a href="/admin/user/create" class="btn btn-primary">Create a User</a>
+                                            <h3>Người dùng</h3>
+                                            <a href="/admin/user/create" class="btn btn-primary">Tạo tài khoản</a>
                                         </div>
                                         <hr />
                                         <table class="table table-bordered table-hover">
