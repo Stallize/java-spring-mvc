@@ -16,7 +16,19 @@
                             <a href="/" class="nav-item nav-link">Trang chủ</a>
                             <a href="/products" class="nav-item nav-link">Sản phẩm</a>
                             <a href="/contact" class="nav-item nav-link">Liên hệ</a>
+                        </div>
+                        <div class="position-relative mx-auto" style="width:500px">
+                            <div class="position-relative mx-auto" style="width:500px">
+                                <form action="${pageContext.request.contextPath}/products" method="get">
+                                    <input id="search-input"
+                                        class="form-control border-2 border-secondary w-100 py-3 px-4 rounded-pill"
+                                        type="text" name="name" placeholder="Search" autocomplete="off">
+                                    <button type="submit"
+                                        class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100"
+                                        style="top: 0; right: 0%; background-color: orange;">Tìm ngay</button>
+                                </form>
 
+                            </div>
                         </div>
                         <div class="d-flex m-3 me-0">
                             <c:if test="${not empty pageContext.request.userPrincipal}">

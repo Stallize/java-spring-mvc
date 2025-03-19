@@ -14,6 +14,7 @@ import vn.spring.stationery.domain.CartDetail;
 import vn.spring.stationery.domain.Order;
 import vn.spring.stationery.domain.OrderDetail;
 import vn.spring.stationery.domain.Product;
+import vn.spring.stationery.domain.Product_;
 import vn.spring.stationery.domain.User;
 import vn.spring.stationery.domain.dto.ProductCriteriaDTO;
 import vn.spring.stationery.repository.CartDetailRepository;
@@ -53,6 +54,7 @@ public class ProductService {
 
     public Page<Product> fetchProductsWithSpec(Pageable page, ProductCriteriaDTO productCriteriaDTO) {
         if (productCriteriaDTO.getTarget() == null
+                && productCriteriaDTO.getName() == null
                 && productCriteriaDTO.getFactory() == null
                 && productCriteriaDTO.getSize() == null
                 && productCriteriaDTO.getPrice() == null) {
@@ -61,6 +63,10 @@ public class ProductService {
 
         Specification<Product> combinedSpec = Specification.where(null);
 
+        if (productCriteriaDTO.getName() != null && productCriteriaDTO.getName().isPresent()) {
+            Specification<Product> currentSpecs = ProductSpecs.nameLike(productCriteriaDTO.getName().get());
+            combinedSpec = combinedSpec.and(currentSpecs);
+        }
         if (productCriteriaDTO.getTarget() != null && productCriteriaDTO.getTarget().isPresent()) {
             Specification<Product> currentSpecs = ProductSpecs.matchListTarget(productCriteriaDTO.getTarget().get());
             combinedSpec = combinedSpec.and(currentSpecs);

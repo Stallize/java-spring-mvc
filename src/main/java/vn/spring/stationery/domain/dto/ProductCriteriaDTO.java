@@ -5,6 +5,7 @@ import java.util.Optional;
 
 public class ProductCriteriaDTO {
     private Optional<String> page;
+    private Optional<String> name;
     private Optional<List<String>> factory;
     private Optional<List<String>> target;
     private Optional<List<String>> price;
@@ -17,6 +18,14 @@ public class ProductCriteriaDTO {
 
     public void setPage(Optional<String> page) {
         this.page = page;
+    }
+
+    public Optional<String> getName() {
+        return name;
+    }
+
+    public void setName(Optional<String> name) {
+        this.name = name;
     }
 
     public Optional<List<String>> getFactory() {

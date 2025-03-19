@@ -261,7 +261,7 @@
                                                             </h4>
                                                             <p style="font-size: 13px;height:80px;">
                                                                 ${product.shortDesc}</p>
-                                                            <p style="font-size: 13px;height:10px;">
+                                                            <p style="font-size: 13px;height:10px;font-weight: bold;">
                                                                 Dành cho trẻ ${product.size}</p>
                                                             <div
                                                                 class="d-flex  flex-lg-wrap justify-content-center flex-column">
