@@ -2,3 +2,10 @@
 Tài khoản quyền Admin : admin@gmail.com . Password: 123456
 Tài khoản quyền user : user@gmail.com . Password: 123456
 
+-	Demo
+-	Tạo 1 đơn hàng vào giỏ hàng , xử lý đơn hàng như thế nào , thanh toán , thanh toán xong thì có trừ đi trong kho hàng không, có xử lý trường hợp thanh toán quá số lượng hàng trong kho không 
+-	Size , Target của sản phẩm
+-	Database
+-	Responsive
+-	Sơ đồ phân rã chức năng
+-	Mối quan hệ giữa các bảng

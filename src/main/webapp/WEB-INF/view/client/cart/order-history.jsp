@@ -62,8 +62,8 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Sản phẩm</th>
-                                            <th scope="col">Tên</th>
+                                            <th scope="col">Đơn hàng</th>
+                                            <th scope="col">Tên sản phẩm</th>
                                             <th scope="col">Giá</th>
                                             <th scope="col">Số lượng</th>
                                             <th scope="col">Thành tiền</th>

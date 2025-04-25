@@ -22,7 +22,7 @@
                                 <form action="${pageContext.request.contextPath}/products" method="get">
                                     <input id="search-input"
                                         class="form-control border-2 border-secondary w-100 py-3 px-4 rounded-pill"
-                                        type="text" name="name" placeholder="Search" autocomplete="off">
+                                        type="text" name="name" placeholder="Tìm kiếm sản phẩm" autocomplete="off">
                                     <button type="submit"
                                         class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100"
                                         style="top: 0; right: 0%; background-color: orange;">Tìm ngay</button>
